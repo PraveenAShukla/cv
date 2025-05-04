@@ -1,0 +1,611 @@
+/* General Styles */
+:root {
+    --primary-color: #ff4901; /* Orange accent color */
+    --text-color: #333;
+    --light-gray: #f8f9fa;
+    --medium-gray: #e9ecef;
+    --dark-gray: #6c757d;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    padding-top: 120px; /* Adjusted for fixed header */
+    background-color: white;
+}
+
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Fixed Header and Navigation */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 255, 0.80);
+    backdrop-filter: blur(4px); /* Optional: adds a nice blur effect */
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    -webkit-backdrop-filter: blur(6px); /* Safari support */
+}
+
+.logo-container {
+    margin-bottom: 15px;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.navbar {
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.navbar-nav {
+    gap: 20px;
+}
+
+.nav-link {
+    color: #D3D3D3; /* Light Grey */
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #000000; /* Black when hovered */
+}
+
+
+/* Profile Section */
+.profile-img-container {
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 5px;
+    display: block;
+}
+
+.name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.specialties {
+    margin-bottom: 15px;
+}
+
+.specialties p {
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.contact-info p {
+    margin-bottom: 4px;
+    font-size: 0.85rem;
+    color: var(--dark-gray);
+    align-items: center;
+}
+
+/* Sections */
+.section {
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.section-content {
+    margin-bottom: 30px;
+}
+
+/* Affiliations */
+.affiliation {
+    margin-bottom: 25px;
+}
+
+.affiliation h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.timeframe {
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+    margin-bottom: 5px;
+}
+
+.position {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.researcher-link {
+    color: #4285F4;
+    text-decoration: none;
+}
+
+.researcher-link:hover {
+    text-decoration: underline;
+}
+
+/* Education */
+.education {
+    margin-bottom: 25px;
+}
+
+.education h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.degree {
+    font-size: 0.95rem;
+}
+.timeframe {
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+    margin-bottom: 5px;
+}
+
+.degree {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+
+/* Publications */
+.publication {
+    margin-bottom: 25px;
+}
+
+.publication h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.publication-link {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.publication-link:hover {
+    text-decoration: underline;
+}
+
+.authors {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.venue {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--dark-gray);
+}
+
+
+/* Projects */
+.project {
+    margin-bottom: 30px;
+}
+
+.project h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.project p {
+    margin-bottom: 10px;
+}
+
+.project-link {
+    color: var(--primary-color);
+    word-break: break-all;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+/* Contact */
+.contact-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: right;
+    }
+
+    .profile-header {
+        display: flex;
+        flex-direction: column; /* default for desktop */
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 17px;
+        text-align: center;
+      }
+      
+      .profile-img {
+        width: 162px;
+        height: 184px;
+        border-radius: 20px;
+        object-fit: cover;
+      }
+      
+      .profile-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      /* On mobile: image left, text right */
+      @media (max-width: 768px) {
+        .profile-header {
+          flex-direction: row;
+          align-items: flex-start;
+          text-align: left;
+        }
+      
+        .profile-img {
+          margin-right: 16px;
+        }
+      
+        .profile-info {
+          align-items: flex-start;
+        }
+      }
+
+    body {
+        padding-top: 80px;
+    }
+
+    .main-container {
+        padding: 15px;
+    }
+
+    .section {
+        margin-bottom: 40px;
+    }
+
+    /* Header Adjustments */
+    .fixed-header {
+        padding: 8px 0;
+    }
+
+    .navbar-collapse {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+
+    .navbar-nav {
+        gap: 10px;
+    }
+
+    /* Profile Section */
+    .profile-img {
+        max-width: 180px;
+        margin: 0 auto 20px;
+    }
+
+    .name {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .specialties {
+        text-align: center;
+    }
+    .contact-info {
+        text-align: center;
+    }
+    
+    .contact-info {
+    margin-bottom: 10px;
+    }
+
+    /* Section Adjustments */
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .affiliation h3, .education h3, .project h3 {
+        font-size: 1rem;
+    }
+
+    .timeframe, .position, .degree {
+        font-size: 0.85rem;
+    }
+
+    /* Project Links */
+    .project-link {
+        font-size: 0.8rem;
+        display: inline-block;
+        word-break: break-all;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        padding-top: 70px;
+    }
+
+    .fixed-header {
+        padding: 6px 0;
+    }
+
+    .section {
+        margin-bottom: 30px;
+    }
+
+    .profile-img {
+        max-width: 150px;
+    }
+
+    .name {
+        font-size: 1.3rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+}
+/* AI/DS Themed Logo Styles */
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.logo-icon {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+}
+
+.logo-icon i {
+    position: absolute;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+}
+
+.logo-icon .fa-robot {
+    color: var(--primary-color);
+    top: 0;
+    left: 0;
+}
+
+.logo-icon .fa-chart-line {
+    color: #4e79a7;
+    bottom: 0;
+    right: 0;
+    font-size: 1.1rem;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text .name {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.logo-text .subtitle {
+    font-size: 0.75rem;
+    color: var(--dark-gray);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+@media (max-width: 720px) {
+    .contact-info {
+      text-align: center;
+    }
+  }
+  
+/* Hover Effects */
+.logo-container:hover .fa-robot {
+    transform: translateY(-2px) rotate(-10deg);
+}
+
+.logo-container:hover .fa-chart-line {
+    transform: translateY(2px) rotate(10deg);
+}
+
+.logo-container:hover .name {
+    color: var(--primary-color);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .logo-icon {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .logo-icon i {
+        font-size: 1.2rem;
+    }
+    
+    .logo-icon .fa-chart-line {
+        font-size: 1rem;
+    }
+    
+    .logo-text .name {
+        font-size: 1rem;
+    }
+    
+    .logo-text .subtitle {
+        font-size: 0.65rem;
+    }
+    
+}
+@media (max-width: 700px) {
+    .contact-info {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  
+
+/* @media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #f1f1f1;
+    }
+    .fixed-header {
+        background-color: rgba(30, 30, 30, 0.9);
+    }
+    .nav-link {
+        color: #f1f1f1;
+    }
+    .nav-link:hover {
+        color: var(--primary-color);
+    }
+} */
+.experience {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0 15px; /* Add some horizontal padding for mobile spacing */
+}
+
+.experience h3 {
+    font-size: 1.2rem; /* Increased for better desktop readability */
+    font-weight: 600;
+    margin-bottom: 3px;
+    color: var(--primary-color);
+    word-break: break-word;
+}
+
+.position {
+    font-size: 1rem; /* Slightly larger for readability */
+    word-break: break-word;
+}
+
+.role {
+    font-size: 1rem;
+    font-weight: 520 !important; 
+    margin-bottom: 5px; /* Make the role bold */
+}
+
+/* Responsive media queries for extra control */
+/* @media (max-width: 768px) {
+    .experience h3 {
+        font-size: 1.2rem;
+    }
+    
+    .position {
+        font-size: 1rem;
+    }
+    .role {
+        font-size: .8rem;
+        font-weight: 500 !important;  /* Ensure bold on smaller screens */
+    /* }
+} */
+/*  */
+@media (max-width: 480px) {
+    .experience {
+        padding: 0 10px;
+    }
+
+    .experience h3 {
+        font-size: 1.1rem;
+    }
+
+    .position {
+        font-size: 0.95rem;
+    }
+    .role {
+        font-size: 0.8rem;
+        /* font-weight: 500 !important;  /* Bold the role even on mobile */
+    }
+}  
+
+.achievement-list li {
+    color: #000; /* True black */
+}
+
+.degree {
+    color: #000; /* True black */
+}
+.position {
+    color: #000; /* True black */
+}   
+.footer-modern {
+    background: #f9f9f9; /* Light gray background */
+    color: #333333;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem 1rem;
+}
+
+.footer-link {
+    color: #444;
+    text-decoration: none;
+    font-weight: 500;
+    opacity: 0.85;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-link:hover {
+    color: #0d6efd; /* Bootstrap blue */
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.footer-tagline {
+    font-size: 0.9rem;
+    color: #777777;
+    margin-bottom: 0;
+}
+
+.footer-copy {
+    color: #999999;
+}
+.semi-bold {
+    font-weight: 500; /* or 550 depending on how light you want it */
+}
+
