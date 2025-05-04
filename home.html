@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praveen Shukla - Portfolio</title>
+    <!-- AOS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    AOS.init();
+  });
+</script>
+
+
+<body>
+    <header class="fixed-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid px-0">
+                    <!-- Updated AI/DS themed logo -->
+                    <a class="navbar-brand logo-container" href="#">
+                        <div class="logo-icon">
+                            <i class="fas fa-robot"></i>
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="logo-text">
+                            <span class="name">Praveen Shukla</span>
+                        </div>
+                    </a>
+                    
+                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">About Me</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#education">Education</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#extracurricular">Extracurricular</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#experience">Experience</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#projects">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container main-container">
+        <main>
+            <!-- About Me Section -->
+            <section id="about" class="section">
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-4">
+                        <div class="profile-header">
+                            <div class="profile-img-container">
+                                <img src="{{ url_for('static', filename='img/profile.jpg') }}" alt="Praveen Shukla" class="profile-img">
+                            </div>
+                            <div class="profile-info">
+                                <h2 class="name">Praveen Shukla</h2>
+                                <div class="specialties">
+                                    <p>Graph Deep Learning</p>
+                                    <p>Data Distillation</p>
+                                    <p>AI in Healthcare</p>
+                                    <p>Spatial databases</p>
+                                    
+                                </div>
+                                <div class="contact-info" style="margin-top: 10px;">
+                                    <p>prashuiit@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-8">
+                        <h2 class="section-title">About me</h2>
+                        <div class="section-content">
+                            <p class="details">
+                                I'm a <span class="semi-bold">Artificial Intelligence & Data Science</span> undergrad at <span class="semi-bold">IIT Madras</span>, turning complex data into actionable insights and building real-world solutions—from <span class="semi-bold">graph deep learning</span> models to <span class="semi-bold">spatio-temporal analytics</span>, <span class="semi-bold">data distillation</span>, and <span class="semi-bold">efficient information retrieval</span>. I'm also prototyping <span class="semi-bold">LLM-powered agents</span> and exploring <span class="semi-bold">prompt engineering</span> and <span class="semi-bold">agentic frameworks</span> to push the boundaries of human-AI collaboration.
+                                <br><br>
+                                Outside the lab, I <span class="semi-bold">co-discovered 19 Main Belt asteroids</span> as a citizen-science mentor, <span class="semi-bold">founded GLOBAL SCIENCE</span> to engage <span class="semi-bold">50K+ students</span> in STEM, and love hands-on tinkering—whether decoding ancient science texts, listening to instrumental music, or hacking AI-powered bots and intelligent web apps. All fueled by <span class="semi-bold">curiosity</span>, <span class="semi-bold">caffeine</span>, and <span class="semi-bold">code</span>. :3
+                            </p>
+                            
+                        </div>
+
+                        <h2 class="section-title">Affiliations</h2>
+                        <div class="section-content">
+                            <div class="affiliation">
+                                <h3>Indian Institute of Technology Madras</h3>
+                                <p class="timeframe">Incoming May 2024 - Present | Chennai, TN, India</p>
+                                <p class="position">Research Intern (under Dr. <a href="https://rbcdsai.iitm.ac.in/people/krishnan-balasubramanian/" class="researcher-link" target="_blank">Krishnan Balasubramanian</a>)- Center for Non Destructive Evaluation Lab (<a href="https://www.cnde.in/" class="researcher-link" target="_blank">CNDE Lab</a>)</p>
+                            </div>
+                            <div class="affiliation">
+                                <h3>Indian Institute of Information Technology, Design and Manufacturing, Kancheepuram</h3>
+                                <p class="timeframe">January 2025 - March 2025 | Kancheepuram, TN, INdia</p>
+                                <p class="position">Research Intern (under Dr. <a href="https://www.leaplab-iiitdm.co.in/team" class="researcher-link" target="_blank">Uttam Mrinal Pal</a>)- Light Engineering and Applied Photonics Lab (LEAP Lab)</p>
+                            </div>
+
+                            <div class="affiliation">
+                                <h3>Indian Institute of Remote Sensing - ISRO</h3>
+                                <p class="timeframe">August 2021 - Present | Mumbai, MH, India</p>
+                                <p class="position">Outreach Coordinator (under Zonal Org <a href="#" class="researcher-link">GLOBAL SCIENCE</a>) - Zonal Organization and External Engagements</p>
+                            </div>
+
+                            <div class="affiliation">
+                                <h3>VIGYAN PRASAR, DST, Govt. of India</h3>
+                                <p class="timeframe">February 2020 - November 2023 | Mumbai, MH, India</p>
+                                <p class="position">Science Club Cooridnator (under <a href="https://www.indiascienceandtechnology.gov.in/listingpage/vigyan-prasar-completes-33-glorious-years-science-communication-popularisation-extension" class="researcher-link" target="_blank">VIPNET</a>)-  VIgyan Prasar NETwork (VIPNET) of Science Clubs in multiple science club.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section id="education" class="section" data-aos="fade-up" data-aos-delay="100">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="section-title">Education</h2>
+                        <div class="section-content">
+                            <div class="row flex-column gap-4">
+                                <div class="education" data-aos="fade-up" data-aos-delay="50">
+                                    <h3>Indian Institute of Technology Madras</h3>
+                                    <p class="timeframe">2024 - 2028 | Chennai, TN India</p>
+                                    <p class="degree">Bachelors in Artificial Intelligence & Data Science  | SGPA: 9/10</p>
+                                </div>
+
+                                <div class="education" data-aos="fade-up" data-aos-delay="100">
+                                    <h3>M H High School & Jr College</h3>
+                                    <p class="timeframe">2021 - 2023 | Mumbai, MH India</p>
+                                    <p class="degree">Higher Secondary Education (MH State Board) | GPA: 8/10</p>
+                                </div>
+
+                                <div class="education" data-aos="fade-up" data-aos-delay="150">
+                                    <h3>SMT. Shushiladevi Deshmukh Vidyalaya & Jr College</h3>
+                                    <p class="timeframe">2014 - 2021 | Mumbai, MH India</p>
+                                    <p class="degree">Secondary Education (MH State Board) | GPA: 9.1/10 | Mathematics State Topper</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Scholastic Achievements Section -->
+            <section id="extracurricular" class="section" data-aos="fade-up" data-aos-delay="100">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="section-title">Scholastic Achievements</h2>
+                        <div class="section-content">
+                            <ul class="achievement-list">
+                                <li>
+                                    Pulse @ Techfest - IIT Bombay: Finalist in GenAI Buildathon
+                                    <span class="timeframe"> - 2024</span>
+                                </li>
+                                <li>Co-discoverer of the Main Belt Asteroid 2020UJ37, named by the IAU's Minor Planet Center <span class="timeframe">- 2020</span>          </li>
+                                <li>Among the top 20 in the AI Quiz on National Science Day (NSD-2022), conducted by Bhabha Atomic Research Center (BARC), Mumbai <span class="timeframe">- 2022</span></li>
+                                <li>State topper in Mathematics in the Matriculation examination conducted by MSBSHSE, Pune. <span class="timeframe">- 2021</span> </li>
+                                <li>Awarded 1<sup>st</sup> Position in Youth Invention with a cash prize of ₹5,000, a certificate, and a medal <span class="timeframe">- 2020</span></li>
+                                <li>National Top performer in MyGov Quiz 2018-19 by MyGov, MeitY, Govt. of India <span class="timeframe">- 2018</span> </li>
+                            </ul>
+                        </div>
+                        <h2 class="section-title">Certifications</h2>
+                        <div class="section-content">
+                            <ul class="achievement-list">
+                                <li>
+                                    Reinforcement Learning From Human Feedback - DeepLearning.AI (<a href="https://learn.deeplearning.ai/accomplishments/e886b54c-b070-492e-8bbf-9ee65778ca6e" class="researcher-link" target="_blank">Certificate</a>)
+                    <span class="timeframe">- Apr 2025</span><br>
+                    
+                                </li>
+                                <li>
+                    Fundamentals of AI Agents Using RAG and LangChain - IBM (<a href="https://www.coursera.org/account/accomplishments/verify/QW5ATSTX5DLS" class="researcher-link" target="_blank">Certificate</a>)
+                    <span class="timeframe">- Jan 2025</span><br>
+                    
+                                </li>
+                                <li>
+                    Supervised Machine Learning: Regression and Classification - DeepLearning.AI (<a href="https://www.coursera.org/account/accomplishments/verify/4BYQ7QLU1HWX" class="researcher-link" target="_blank">Certificate</a>)
+                    <span class="timeframe">- Jan 2025</span><br>
+                    
+                                </li>
+                                <li>
+                    Developing AI Applications with Python and Flask - IBM (<a href="https://www.coursera.org/account/accomplishments/verify/8MT5I5CV6TVK" class="researcher-link" target="_blank">Certificate</a>)
+                    <span class="timeframe">- Dec 2024</span><br>
+                    
+                                </li>
+                                <li>
+                    Python for Data Science, AI & Development - IBM (<a href="https://coursera.org/share/6fba72e04ef26fec1c6866ff7eedc855" class="researcher-link" target="_blank">Certificate</a>)
+                    <span class="timeframe">- Sep 2024</span><br>
+                    
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Experience Section -->
+            <section id="experience" class="section" data-aos="fade-up" data-aos-delay="100">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="section-title">Experience</h2>
+                        <div class="section-content">
+                            <div class="row row-cols-1 row-cols-md-2 g-4">
+                                <div class="experience">
+                                    <!-- Content will be based on the screenshots or additional information provided -->
+                                    <div class="experience" data-aos="fade-up" data-aos-delay="150">
+                                        <h3>Indian Institute of Information Technology, Design and Manufacturing, Kancheepuram</h3>
+                                        <p class="timeframe">Jan 2025 - Mar 2025 | Kancheepuram, TN India</p>
+                                        <p class="role"><strong>Research Intern</strong></p>
+                                        <p class="details">Developed deep learning models for early detection and classification of Oral Potentially Malignant Disorders (OPMDs) using clinical image data. Conducted literature review, dataset preparation, and domain-specific annotation of lesions. Implemented YOLO-based object detection and CNN classifiers in PyTorch to identify high-risk conditions like leukoplakia, erythroplakia, OLP, OSF, and PVL. Enhanced model performance through targeted augmentation and lesion-specific feature engineering. Collaborated with clinical researchers to ensure diagnostic accuracy and translational impact in oral cancer screening.</p>
+                                    </div>
+                                    <div class="experience" data-aos="fade-up" data-aos-delay="200">
+                                        <h3>Lumio AI</h3>
+                                        <p class="timeframe">Oct 2024 - Nov 2024 | Mumbai, MH India</p>
+                                        <p class="role"><strong>AI Engineer Intern</strong></p>
+                                        <p class="details">Developed and optimized end-to-end AI solutions for real-time client projects, applying advanced deep learning techniques and algorithm fine-tuning. Integrated Retrieval-Augmented Generation (RAG) with large language models (LLMs) to elevate context-aware responses in AI systems. Led model experimentation, feature engineering, and evaluation, ensuring high performance and reliability. Collaborated across engineering and product teams to deliver AI-driven features aligned with business goals. Demonstrated expertise in artificial intelligence, strategic communication, and problem-solving in fast-paced, innovation-driven environments.</p>
+                                    </div>
+                                    <div class="experience" data-aos="fade-up" data-aos-delay="250">
+                                        <h3>GLOBAL SCIENCE</h3>
+                                        <p class="timeframe">Feb 2020 - Present | Mumbai, MH India</p>
+                                        <p class="role"><strong>Founder & Director</strong></p>
+                                        <p class="details">
+                                            Started GLOBAL SCIENCE at the <span class="semi-bold">age of 12</span>, which later became affiliated with 
+                                            <span class="semi-bold">Vigyan Prasar (DST, GoI)</span> as a nationally recognized science communication initiative. 
+                                            Led NASA-funded asteroid discovery campaigns (19 finds), and organized India Techno Fest featuring experts from ISRO, IIT, and Meta. 
+                                            Initiated impactful programs such as <em>Inspiring Young</em> and <em>Science at Home</em> (including virtual CERN tours), reaching over 50,000 students across India.<br><br>
+                                            Built a network of 150+ district coordinators and 10 mentors from leading institutions. Spearheaded national science fairs, historical science series, and pandemic-era STEM outreach efforts to promote hands-on learning. 
+                                            Recognized with the <span class="semi-bold">Award of Excellence</span> by Vigyan Prasar for two consecutive years (2020-21 and 2021-22) for contributions to science communication.
+                                        </p>
+                                    </div>
+                                    <div class="experience" data-aos="fade-up" data-aos-delay="250">
+                                        <h3>International Astronomical Search Collaboration (IASC)</h3>
+                                        <p class="timeframe">October 2020 - November 2021 | Mumbai, MH India</p>
+                                        <p class="role"><strong>Citizen Scientist</strong></p>
+                                        <p class="details">Spearheaded the Saptarishi VIPNET 03 campaign as Team Leader, mentoring government school teachers across three Indian states in the discovery of 10 preliminary Main Belt asteroids. Elevated to National Mentor, where I successfully led and trained multiple teams of students and educators, achieving 19 preliminary asteroid discoveries under my guidance. Played a pivotal role in capacity-building through technical training on Astrometrica and MPC reporting, empowering grassroots citizen scientists to contribute to global astronomical research.</p>
+                                    </div>        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="section">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="section-title">Projects</h2>
+                        <div class="section-content">
+                            <div class="row row-cols-1 row-cols-lg-2 g-4">
+                                <div class="col">
+                                    <div class="project">
+                                        <h3>Next-Gen Hyper-Personalized AI Email Engine</h3>
+                                        <ul>
+                                            <li><strong>End-to-End AI Pipeline:</strong> Automatically retrieves incoming emails (IMAP), extracts context from provided data sources (e.g., PDFs via PyPDF2), and generates fully tailored replies using OpenAI GPT and NLTK.</li>
+                                            <li><strong>Intuitive Dashboard & Review:</strong> Flask-based UI displays emails, lets agents edit or regenerate responses inline, then dispatch with one click (Gmail API/SMTP).</li>
+                                            <li><strong>Impact & Metrics:</strong> Cut average reply time by 99%, boosting customer satisfaction by 35% in pilot tests.</li>
+                                            <li><strong>Tech Stack:</strong> Python, Flask, HTML/CSS/Bootstrap, JavaScript, OpenAI GPT, NLTK, PyPDF2, Gmail API, IMAP, SMTP, OAuth.</li>
+                                          </ul>
+                                          
+                                        <p><a href="https://github.com/PraveenAShukla/ai-email-engine" class="project-link" target="_blank">https://github.com/PraveenAShukla/ai-email-engine</a></p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="project">
+                                        <h3>AI Productivity Suite - AssistX (Modular AI Tool Integration Platform)
+
+                                        </h3>
+                                        <ul>
+                                            <li><strong>AI Productivity Suite:</strong> Built a modular tool that integrates ChatGPT, Whisper, and Vision APIs with 95% user-task accuracy for text, voice, and image inputs.</li>
+                                            <li><strong>Scalable Multi-Agent Design:</strong> Enabled plug-and-play architecture supporting 10+ AI tools and multi-agent interactions with seamless CLI access.</li>
+                                            <li><strong>Workflow Optimization:</strong> Reduced user tool-switching friction by 70% and accelerated task completion time by ~60% through unified AI access.</li>
+                                            <li><strong>Persistent Context Management:</strong> Implemented session-based memory using JSON/DB storage, boosting context retention and reusability by 80%.</li>
+                                            <li><strong>Secure API Integration:</strong> Used API key encryption and modular routing to ensure flexible yet secure AI tool invocation.</li>
+                                            <li><strong>Technologies:</strong> Python, Flask, OpenAI API (ChatGPT, Whisper, DALL·E), CLI, JSON, modular system design.</li>
+                                          </ul>
+                                          
+                                          
+                                        <p><a href="https://github.com/PraveenAShukla/AssistX" class="project-link" target="_blank">https://github.com/PraveenAShukla/AssistX</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="section">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="section-title">Contact</h2>
+                        <div class="section-content">
+                            <div class="d-flex gap-3">
+                                <p><a href="https://www.linkedin.com/in/praveen-ashukla/" class="contact-link" target="_blank">LinkedIn</a></p>
+                                <p><a href="mailto:prashuiit@gmail.com" class="contact-link" target="_blank">Email</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <!-- Wave Divider -->
+<div style="height: 30px; overflow: hidden;">
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+        <path d="M0.00,49.98 C150.00,150.00 349.00,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+            style="stroke: none; fill: #1f2e3c;"></path>
+    </svg>
+</div>
+
+<!-- Footer Section -->
+<footer style="background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);" class="text-white pt-4 pb-3">
+    <div class="container text-center text-md-start">
+        <div class="row">
+            <!-- Left Section -->
+            <div class="col-md-6 mb-3 mb-md-0">
+                <h5 class="fw-bold">Praveen Shukla</h5>
+                <p class="text-white-50 small">AI & Data Science Enthusiast | Portfolio 2025</p>
+                <div class="mt-3 d-flex flex-wrap justify-content-center justify-content-md-start gap-3">
+                    <i class="fab fa-python fa-lg text-white-50"></i>
+                    <i class="fas fa-brain fa-lg text-white-50"></i>
+                    <i class="fas fa-chart-line fa-lg text-white-50"></i>
+                    <i class="fab fa-github fa-lg text-white-50"></i>
+                </div>
+            </div>
+
+            <!-- Right Section -->
+            <div class="col-md-6 d-flex justify-content-center justify-content-md-end align-items-center gap-3">
+                <a href="mailto:prashuiit@gmail.com" class="text-white text-decoration-none footer-link">
+                    <i class="fas fa-envelope me-1"></i> Email
+                </a>
+                <a href="http://github.com/PraveenAShukla/" class="text-white footer-link" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/praveen-ashukla/" class="text-white footer-link" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+
+        <hr class="border-light my-3">
+
+        <div class="text-center small text-white-50">
+            © 2025 Praveen Shukla. All Rights Reserved.
+        </div>
+    </div>
+</footer>
+
+<!-- Back to Top Button -->
+<a href="#about" class="btn btn-outline-info btn-sm rounded-circle position-fixed bottom-0 end-0 m-3" title="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+</a>
+
+    
+    
+    <script>
+        // Smooth scroll and close menu on click (for mobile)
+        document.querySelectorAll('a.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+    
+                // Collapse the navbar if it's open (on mobile)
+                const navbarToggler = document.querySelector('.navbar-toggler');
+                const navbarCollapse = document.querySelector('.navbar-collapse');
+                if (navbarToggler && navbarCollapse.classList.contains('show')) {
+                    navbarToggler.click(); // this simulates a click to close it
+                }
+            });
+        });
+    </script>
+    <script>
+        const btn = document.querySelector('.btn.btn-outline-info');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                btn.style.display = 'block';
+            } else {
+                btn.style.display = 'none';
+            }
+        });
+    </script>
+    
+           
+</body>
+</html>
