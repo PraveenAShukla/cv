@@ -1,40 +1,61 @@
 /* General Styles */
 :root {
-    --primary-color: #ff4901; /* Orange accent color */
+    --primary-color: #ff4901;
     --text-color: #333;
     --light-gray: #f8f9fa;
     --medium-gray: #e9ecef;
     --dark-gray: #6c757d;
+    --header-height: 80px;
+    --header-height-mobile: 60px;
+}
+
+html {
+    scroll-padding-top: var(--header-height);
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     color: var(--text-color);
     line-height: 1.6;
-    padding-top: 120px; /* Adjusted for fixed header */
     background-color: white;
+    padding-top: var(--header-height);
 }
 
-
-.main-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Fixed Header and Navigation */
+/* Fixed Header */
 .fixed-header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgb(255, 255, 255, 0.80);
-    backdrop-filter: blur(4px); /* Optional: adds a nice blur effect */
+    height: var(--header-height);
+    background-color: rgba(255, 255, 255, 0.80);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(6px);
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 15px 0;
-    -webkit-backdrop-filter: blur(6px); /* Safari support */
+    transition: height 0.3s ease;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    :root {
+        scroll-padding-top: var(--header-height-mobile);
+    }
+    
+    body {
+        padding-top: var(--header-height-mobile);
+    }
+    
+    .fixed-header {
+        height: var(--header-height-mobile);
+        padding: 8px 0;
+    }
+}
+
+/* Rest of your existing CSS remains unchanged below this line */
+
 
 .logo-container {
     margin-bottom: 15px;
